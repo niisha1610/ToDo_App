@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "mocha 'test/app.js' && nyc --reporter=text mocha"
+    "test": "mocha 'test/app.js' && nyc --reporter=text mocha",
+	"sonar": "node sonar-project.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "chai": "^4.3.4",
     "mocha": "^8.4.0",
+    "sonarqube-scanner": "^2.8.0",
     "supertest": "^6.1.3"
   }
 }
