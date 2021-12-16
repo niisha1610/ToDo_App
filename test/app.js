@@ -3,9 +3,9 @@ const chaiHttp = require('chai-http');
 const expect = chai.expect;
 const app = require('../app.js');
 chai.use(chaiHttp);
-console.log("Welcome to Test Class");
+console.log("Welcome to Test Class "); 
 
-    describe('Tasks Tracker', () => {
+    describe('ToDo Application', () => {
         it('should render the index view with to do items and completed items', (done) => {
             chai.request(app)
                 .get('/')
@@ -17,7 +17,7 @@ console.log("Welcome to Test Class");
         });
 		it('should add the item in the todo list', (done) => {
             chai.request(app)
-                .post('/inserttask')
+                .post('/addtask')
 				.set('content-type', 'application/x-www-form-urlencoded')
 				.send({newtask: 'test task123'})
                 .end((err, res) => {
@@ -29,7 +29,7 @@ console.log("Welcome to Test Class");
         });
 		it('should remove the item in the todo list', (done) => {
             chai.request(app)
-                .post('/deletetask')
+                .post('/removetask')
 				.set('content-type', 'application/x-www-form-urlencoded')
 				.send({newtask: '&check=practise+with+nodejs'})
                 .end((err, res) => {
