@@ -1,14 +1,27 @@
 <html>
 <head> 
+
+<title> Tasks Tracker </title>
+ <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+ 
 <title> ToDo App </title>
 <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+
  <link href="/styles.css" rel="stylesheet">
  </head>
 <body>
 <div class="container">
+
+<center> <h1> Tasks Tracker</h1>
+
+<form action ="/inserttask" method="POST">
+
+<input type="text" name="newtask" placeholder="Add new Task in the Tasks Tracker">
+
 <center> <h1> ToDo List Application</h1>
 <form action ="/addtask" method="POST">
 <input type="text" name="newtask" placeholder="Add new Task in ToDo List">
+
 <button class="buttonAdd"> Add New Task </button></center>
 <% if (task.length > 0) {%>
 <h2> Added Task </h2>
@@ -16,12 +29,17 @@
 	<h3><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %> </h3>
 <% } } 
 else {%>
-<h3>Congratulations, add the to do tasks are done! </h3>
+<h3>Congratulations, add the tasks are done! </h3>
 <% }%>
-<button formaction="/removetask" type="submit" id="top" class="button"> Done </button>
+<button formaction="/deletetask" type="submit" id="top" class="button"> Done </button>
 </form>
 <% if (complete.length > 0) {%>
+
+<h2> Finished task </h2>
+
+=======
 <h2> Completed task </h2>
+
  <% for(var i = 0; i < complete.length; i++){ %>
 	<h3><span>&#10003;</span>&nbsp;&nbsp;&nbsp;<%= complete[i] %> </h3>
 <% } } %>
