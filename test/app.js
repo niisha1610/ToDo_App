@@ -4,7 +4,7 @@ const expect = chai.expect;
 const app = require('../app.js');
 chai.use(chaiHttp);
 
-    describe('ToDo Application', () => {
+    describe('Tasks Tracker', () => {
         it('should render the index view with to do items and completed items', (done) => {
             chai.request(app)
                 .get('/')
@@ -16,7 +16,7 @@ chai.use(chaiHttp);
         });
 		it('should add the item in the todo list', (done) => {
             chai.request(app)
-                .post('/addtask')
+                .post('/inserttask')
 				.set('content-type', 'application/x-www-form-urlencoded')
 				.send({newtask: 'test task123'})
                 .end((err, res) => {
@@ -28,7 +28,7 @@ chai.use(chaiHttp);
         });
 		it('should remove the item in the todo list', (done) => {
             chai.request(app)
-                .post('/removetask')
+                .post('/deletetask')
 				.set('content-type', 'application/x-www-form-urlencoded')
 				.send({newtask: '&check=practise+with+nodejs'})
                 .end((err, res) => {
