@@ -43,9 +43,9 @@ app.get("/", function(req, res) {
     res.render("app", { task: task, complete: complete });
 });
 
-//set app to listen on port 8000
-var server = app.listen(8000, function() {
-    console.log("server is running on port 8000");
+//set app to listen on port 8080
+var server = app.listen(8080, function() {
+    console.log("server is running on port 8080");
 });
 
 module.exports = server;
