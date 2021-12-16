@@ -18,7 +18,7 @@ console.log("Welcome to Test Class ");
 	    // Adding items
 		it('should add the item in the todo list', (done) => {
             chai.request(app)
-                .post('/addtask')
+                .post('/inserttask')
 				.set('content-type', 'application/x-www-form-urlencoded')
 				.send({newtask: 'test task123'})
                 .end((err, res) => {
@@ -30,7 +30,7 @@ console.log("Welcome to Test Class ");
         });
 		it('should remove the item in the todo list', (done) => {
             chai.request(app)
-                .post('/removetask')
+                .post('/deletetask')
 				.set('content-type', 'application/x-www-form-urlencoded')
 				.send({newtask: '&check=practise+with+nodejs'})
                 .end((err, res) => {
