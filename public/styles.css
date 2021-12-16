@@ -21,11 +21,11 @@ ul {
 }
 
  .buttonAdd {
-  background-color: #A52A2A;
+  background-color: #1d2e1e;
   border: none;
   color: red;
   padding: 15px 32px;
-  text-align: right;
+  text-align: left;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -33,7 +33,7 @@ ul {
   cursor: pointer;
 }
 .button {
-  background-color: #A52A2A;
+  background-color: #18701d;
   border: none;
   color: green;
   padding: 15px 32px;
