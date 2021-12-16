@@ -15,14 +15,14 @@ var task = ["update AWS Code PipeLine", "practise with nodejs"];
 var complete = ["NodeJS"];
 
 //post route for adding new task 
-app.post("/addtask", function(req, res) {
+app.post("/inserttask", function(req, res) {
     var newTask = req.body.newtask;
     //add the new task from the post route
     task.push(newTask);
     res.redirect("/");
 });
 
-app.post("/removetask", function(req, res) {
+app.post("/deletetask", function(req, res) {
     var completeTask = req.body.check;
     //check for the "typeof" the different completed task, then add into the complete task
     if (typeof completeTask === "string") {

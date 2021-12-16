@@ -3,6 +3,7 @@ const chaiHttp = require('chai-http');
 const expect = chai.expect;
 const app = require('../app.js');
 chai.use(chaiHttp);
+console.log("Welcome to Test Class");
 
     describe('Tasks Tracker', () => {
         it('should render the index view with to do items and completed items', (done) => {
