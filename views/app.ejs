@@ -10,7 +10,7 @@
 <div class="container">
 <center> <h1> Tasks Tracker</h1>
 
-<form action ="/addtask" method="POST">
+<form action ="/inserttask" method="POST">
 
 <input type="text" name="newtask" placeholder="Add new Task in the Tasks Tracker">
 <button class="buttonAdd"> Add New Task </button></center>
@@ -24,7 +24,7 @@
 else {%>
 <h3>Congratulations, add the tasks are done! </h3>
 <% }%>
-<button formaction="/removetask" type="submit" id="top" class="button"> Done </button>
+<button formaction="/deletetask" type="submit" id="top" class="button"> Done </button>
 </form>
 
 
