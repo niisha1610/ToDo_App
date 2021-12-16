@@ -1,6 +1,6 @@
 <html>
 <head> 
-<title> ToDo App </title>
+<title> Tasks Tracker </title>
  <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
  <link href="/styles.css" rel="stylesheet">
  </head>
@@ -8,11 +8,11 @@
 
 <body>
 <div class="container">
-<center> <h1> ToDo List Application</h1>
+<center> <h1> Tasks Tracker</h1>
 
 <form action ="/addtask" method="POST">
 
-<input type="text" name="newtask" placeholder="Add new Task in ToDo List">
+<input type="text" name="newtask" placeholder="Add new Task in the Tasks Tracker">
 <button class="buttonAdd"> Add New Task </button></center>
 
 <% if (task.length > 0) {%>
@@ -22,7 +22,7 @@
 	<h3><input type="checkbox" name="check" value="<%= task[i] %>" /> <%= task[i] %> </h3>
 <% } } 
 else {%>
-<h3>Congratulations, add the to do tasks are done! </h3>
+<h3>Congratulations, add the tasks are done! </h3>
 <% }%>
 <button formaction="/removetask" type="submit" id="top" class="button"> Done </button>
 </form>
